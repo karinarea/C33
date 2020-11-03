@@ -95,6 +95,7 @@ function draw(){
 function mouseDragged(){
     if (gameState!=="launched"){
         Matter.Body.setPosition(birds[birds.length-1].body, {x: mouseX , y: mouseY});
+        Matter.Body.applyForce(birds[birds.length-1].body, birds[birds.length-1].body.position, {x:10, y:-8} );
     }
 }
 
